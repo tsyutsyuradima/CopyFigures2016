@@ -63,8 +63,8 @@ namespace CopyFigure2016.Gesture
 
         void _DrawNewGesture()
         {
-            int index = Random.Range(0, GestureTemplates.Templates.Templates.Count);
-            GameManager.Instance.GestureUpdate(GestureTemplates.Templates.Templates[index]);
+            int index = Random.Range(0, GestureTemplates.Templates.Count);
+            GameManager.Instance.GestureUpdate(GestureTemplates.Templates[index]);
         }
 
         void Update()

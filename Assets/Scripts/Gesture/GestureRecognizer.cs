@@ -10,8 +10,8 @@ namespace CopyFigure2016.Gesture
         // recognizer settings
         static int maxPoints = 40;                  // Max number of point in the gesture
         static int sizeOfScaleRect = 300;           // The size of the bounding box
-        static int compareDetail = 30;              // Number of matching iterations (CPU consuming) 
-        static int angleRange = 90;                 // Angle detail level of when matching with templates 
+        static int compareDetail = 40;              // Number of matching iterations (CPU consuming) 
+        static int angleRange = 45;                 // Angle detail level of when matching with templates 
 
         public static List<Vector3> toShow;
 
@@ -53,8 +53,7 @@ namespace CopyFigure2016.Gesture
             bool result = false;
             if (toShow.Count > 10)
             {
-                GestureTemplates.Templates.Templates.Add(new GestureObject() { Name = name, PointArray = toShow });
-                GestureTemplates.Read();
+                GestureTemplates.Templates.Add(new GestureObject() { Name = name, PointArray = toShow });
                 result = true;
             }
             return result;
